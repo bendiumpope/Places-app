@@ -29,14 +29,15 @@ It contains the following routes
 
 • payload (form-data): name, email, image, password
 
-> A successful registration will result in a HTTP 201 Status Code and a response object 
+• A successful registration will result in a HTTP 201 Status Code and a response object 
+```
 { 
   "userId": "user Id", 
   "email": "user Email",
   "token": "generated token" 
 }
 
-
+```
 # login route
 
 • EndPoint "/users/login"
@@ -45,20 +46,23 @@ It contains the following routes
 
 • payload :  email, password
 
-> A successful login will result in a HTTP 200 Status Code and a response object 
+• A successful login will result in a HTTP 200 Status Code and a response object 
+```
 { 
   "userId": "user Id", 
   "email": "user Email",
   "token": "generated token" 
 }
 
+```
 # get all users route
 
 • EndPoint "/users"
 
 • Request type: GET
 
-> A successful API request will return a HTTP 200 Status Code and a response object of 
+• A successful API request will return a HTTP 200 Status Code and a response object of 
+```
 { 
     "users": [
         {
@@ -74,6 +78,7 @@ It contains the following routes
     ]
 }
 
+```
 # create a place route
 
 • EndPoint "/places"
@@ -82,7 +87,8 @@ It contains the following routes
 
 • Request type: POST
 
-> A successful API request will return a HTTP 200 Status Code and a response object of 
+• A successful API request will return a HTTP 200 Status Code and a response object of 
+```
 {
     "place": {
         "_id": "place ID",
@@ -98,13 +104,15 @@ It contains the following routes
     }
 }
 
+```
 # get a place by place ID route
 
 • EndPoint "/places/:placeId"
 
 • Request type: GET
 
-> A successful API request will return a HTTP 200 Status Code and a response object of 
+• A successful API request will return a HTTP 200 Status Code and a response object of 
+```
 {
     "place": {
         "_id": "place ID",
@@ -120,13 +128,15 @@ It contains the following routes
     }
 }
 
+```
 # get a place by user ID route
 
 • EndPoint "/places/user/:placeId"
 
 • Request type: GET
 
-> A successful API request will return a HTTP 200 Status Code and a response object of 
+• A successful API request will return a HTTP 200 Status Code and a response object of 
+```
 {
     "place": [
         {
@@ -144,6 +154,7 @@ It contains the following routes
     ]
 }
 
+```
 # update a place by place ID
 
 • EndPoint "/places/:placeId"
@@ -152,7 +163,9 @@ It contains the following routes
 
 • payload: title, description
 
-> A successful API request will return a HTTP 200 Status Code and a response object of 
+• A successful API request will return a HTTP 200 Status Code and a response object of 
+
+```
 {
     "place": {
         "_id": "place ID",
@@ -168,18 +181,20 @@ It contains the following routes
     }
 }
 
+```
 # delete a place
 
 • EndPoint "/places/:placeId"
 
 • Request type: delete
 
-> A successful API request will return a HTTP 200 Status Code and a response object of 
+• A successful API request will return a HTTP 200 Status Code and a response object of 
+```
 {
     "places": {
         "message": "place deleted"
     }
 }
 
-
+```
 [Link to the API documentation with sample requests](https://documenter.getpostman.com/view/9775449/TzY6AEzc)
